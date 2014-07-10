@@ -47,3 +47,7 @@ gem 'simple_form', "3.1.0.rc2"
 group :development, :test do
   gem 'sqlite3'
 end
+
+group :production do
+  gem 'rails_12factor'
+end
