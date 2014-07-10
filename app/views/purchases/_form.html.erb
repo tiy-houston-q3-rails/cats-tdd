@@ -1,0 +1,6 @@
+<%= @purchase.errors.full_messages.join(",") %>
+
+<%= simple_form_for @purchase, url: purchases_path(cat_id: @cat.id), remote: true do |f| %>
+  <%= f.input :purchaser_name, label: "Whats your name dude" %>
+  <%= f.submit class: "btn btn-success btn-large" %>
+<% end %>

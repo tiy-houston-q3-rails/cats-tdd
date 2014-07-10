@@ -1,13 +1,13 @@
 <h1>Cloned Cats!</h1>
 
-
+<button class="pull-right">Hide All Cats</button>
 
 <ul class="media-list">
 
   <% @cats.each do |cat| %>
-    <li class="media">
+    <li class="media" id="<%= cat.name.parameterize %>">
       <%= link_to cat, class: "pull-left" do %>
-        <%= image_tag cat.photo.url(:thumb), class: "media-object"%>
+        <%= image_tag cat.photo.url(:thumb), class: "media-object "%>
       <% end %>
       <div class="media-body">
         <h4 class="media-heading"><%= cat.name %></h4>

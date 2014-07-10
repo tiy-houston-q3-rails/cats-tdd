@@ -1,0 +1,6 @@
+
+<% if @purchase.persisted? %>
+  $("#the-form").html("<%= j render partial: 'receipt' %>");
+<% else %>
+  $("#the-form").html("<%= j render partial: 'form' %>");
+<% end %>
