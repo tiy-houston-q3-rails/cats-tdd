@@ -1,0 +1,22 @@
+<h1>Cloned Cats!</h1>
+
+
+
+<ul class="media-list">
+
+  <% @cats.each do |cat| %>
+    <li class="media">
+      <%= link_to cat, class: "pull-left" do %>
+        <%= image_tag cat.photo.url(:thumb), class: "media-object"%>
+      <% end %>
+      <div class="media-body">
+        <h4 class="media-heading"><%= cat.name %></h4>
+        <p>
+          Gender: <%= cat.gender %><br/>
+          Color: <%= cat.color %>
+        </p>
+      </div>
+    </li>
+  <% end %>
+
+</ul>

@@ -1,0 +1,39 @@
+
+<div class="row">
+  <h1><%= @cat.name %></h1>
+</div>
+
+
+<div class="row">
+
+  <div class="col-md-6">
+    <%= image_tag @cat.photo.url, class: "img-responsive" %>
+  </div>
+
+  <div class="col-md-6">
+    <ul class="list-group">
+      <li class="list-group-item">
+        <%= @cat.gender %>
+      </li>
+      <li class="list-group-item">
+        <%= @cat.color %>
+      </li>
+      <li class="list-group-item">
+        <%= show_me_the_money @cat %>
+      </li>
+    </ul>
+  </div>
+</div>
+
+
+<div class="row">
+  <div class="col-md-12 text-center">
+
+    <%= @purchase.errors.full_messages.join(",") %>
+
+    <%= simple_form_for @purchase, url: purchases_path(cat_id: @cat.id) do |f| %>
+      <%= f.input :purchaser_name, label: "Whats your name dude" %>
+      <%= f.submit class: "btn btn-success btn-large" %>
+    <% end %>
+  </div>
+</div>
