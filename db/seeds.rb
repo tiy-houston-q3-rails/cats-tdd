@@ -5,3 +5,8 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+
+Cat.create name: "Kitty", color: "gold", gender: "male"
+Cat.create name: "Bebe Puma", color: "gold", gender: "female"
+Cat.create name: "Cheech", color: "spotted", gender: "female"
