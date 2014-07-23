@@ -46,11 +46,13 @@ gem 'simple_form', "3.1.0.rc2"
 
 group :development, :test do
   gem 'sqlite3'
+  gem 'pry'
 end
 
 group :test do
   gem 'capybara'
   gem 'launchy'
+  gem 'poltergeist'
 end
 
 group :production do
