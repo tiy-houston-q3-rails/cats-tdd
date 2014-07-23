@@ -48,6 +48,11 @@ group :development, :test do
   gem 'sqlite3'
 end
 
+group :test do
+  gem 'capybara'
+  gem 'launchy'
+end
+
 group :production do
   gem 'rails_12factor'
 end
