@@ -7,10 +7,10 @@
   <% @cats.each do |cat| %>
     <li class="media" id="<%= cat.name.parameterize %>">
       <%= link_to cat, class: "pull-left" do %>
-        <%= image_tag cat.photo.url(:thumb), class: "media-object "%>
+        <%= image_tag cat.photo.url(:thumb), class: "media-object", "data-cat-id"=>cat.id %>
       <% end %>
       <div class="media-body">
-        <h4 class="media-heading"><%= cat.name %></h4>
+        <h4 class="media-heading"><%= link_to cat.name, cat %></h4>
         <p>
           Gender: <%= cat.gender %><br/>
           Color: <%= cat.color %>
